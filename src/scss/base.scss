@@ -5,8 +5,10 @@
 body {
     font-size: 15px;
     font-family: $font1;
+    background-color: $main-bg;
 }
 
 img {
     width: 100%;
+    display: block;
 }

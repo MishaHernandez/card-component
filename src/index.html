@@ -14,13 +14,16 @@
 <body>
 
   <div class="container">
-    <img class="card-section" src="./images/image-header-mobile.jpg" alt="header image">
+    <picture class="card-section card-section--header">
+      <source media="(min-width: 900px)" srcset="./images/image-header-desktop.jpg">
+      <img src="./images/image-header-mobile.jpg" alt="header image">
+    </picture>
 
-    <div class="card-section">
+    <div class="card-section card-section--body">
       <div class="card-intro">
-        <h1 class="card-intro__title">Get insights that help your business grow.</h1>
+        <h1 class="card-intro__title">Get <span class="word">insights</span> that help your business grow.</h1>
       
-        <p class="card-intro__paragrapg">
+        <p class="card-intro__paragraph">
           Discover the benefits of data analytics and make better decisions regarding revenue, customer 
           experience, and overall efficiency.
         </p>
@@ -34,7 +37,7 @@
           <span class="card-statistics__item-number">314</span> <span class="card-statistics__item-desc">templates</span>
         </p>
         <p class="card-statistics__item">
-          <span class="card-statistics__item-number">12m+</span> <span class="card-statistics__item-desc">queries</span>
+          <span class="card-statistics__item-number">12M+</span> <span class="card-statistics__item-desc">queries</span>
         </p>
       </div>
     </div>

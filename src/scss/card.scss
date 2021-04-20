@@ -1,7 +1,65 @@
+.container {
+    width: 86%;
+    margin-top: 5.5rem;
+    margin-bottom: 5.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $card-bg;
+    overflow: hidden;
+    border-radius: 8px;
+}
 .card {
-    // &-statistics {
-    //     &__item {
-    //         text-transform: uppercase;
-    //     }
-    // }
+    &-section--header {
+        display: block;
+        position: relative;
+        &::before {
+            content: "";
+            background-color: adjust-color($accent, $saturation: 100%, $lightness: -25%, $alpha: -0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &-section--body {
+        text-align: center; /* test */
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    &-intro {
+        margin-top: 2.375rem;
+        margin-bottom: 2.625rem;
+        &__title {
+            color: $white;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            .word {
+                color: $accent;
+            }
+        }
+        &__paragraph {
+            color: $stat-headings;
+            line-height: 1.6;
+        }
+    }
+    &-statistics {
+        &__item {
+            margin-bottom: 1.875rem;
+            &-number {
+                color: $white;
+                display: block;
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin-bottom: 4px;
+            }
+            &-desc {
+                text-transform: uppercase;
+                color: $stat-headings;
+                font-size: 12px;
+                letter-spacing: 1px;
+            }
+        }
+    }
 }
