@@ -366,27 +366,52 @@ body {
   font-size: 15px;
   font-family: "Inter";
   background-color: #090b1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  body {
+    height: 100vh;
+    justify-content: center;
+  }
 }
 
 img {
   width: 100%;
   display: block;
+  height: 100%;
+  object-fit: cover;
 }
 
 .container {
   width: 86%;
-  margin-top: 5.5rem;
-  margin-bottom: 5.5rem;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 517px;
   background-color: #1b1938;
   overflow: hidden;
   border-radius: 8px;
+  margin-top: 5.5rem;
+  margin-bottom: 5.5rem;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1110px;
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-direction: row;
+  }
 }
 
 .card-section--header {
   display: block;
   position: relative;
+}
+@media (min-width: 1024px) {
+  .card-section--header {
+    order: 2;
+  }
 }
 .card-section--header::before {
   content: "";
@@ -399,13 +424,25 @@ img {
 }
 .card-section--body {
   text-align: center;
-  /* test */
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
 }
-.card-intro {
-  margin-top: 2.375rem;
-  margin-bottom: 2.625rem;
+@media (min-width: 1024px) {
+  .card-section--body {
+    padding-top: 3rem;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+    width: 51.5%;
+    order: 1;
+    text-align: left;
+  }
+}
+@media (min-width: 1024px) {
+  .card-intro {
+    margin-top: 0;
+  }
 }
 .card-intro__title {
   color: white;
@@ -413,22 +450,44 @@ img {
   font-weight: 700;
   margin-bottom: 1rem;
 }
+@media (min-width: 1024px) {
+  .card-intro__title {
+    font-size: 2.3rem;
+    margin-bottom: 1.6rem;
+  }
+}
 .card-intro__title .word {
   color: #aa5cdb;
 }
 .card-intro__paragraph {
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.6;
+  margin-bottom: 1.6rem;
 }
-.card-statistics__item {
-  margin-bottom: 1.875rem;
+@media (min-width: 1024px) {
+  .card-intro__paragraph {
+    width: 90%;
+    margin-bottom: 3.6rem;
+    line-height: 1.7;
+  }
+}
+.card-statistics {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .card-statistics {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 82%;
+  }
 }
 .card-statistics__item-number {
   color: white;
   display: block;
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 .card-statistics__item-desc {
   text-transform: uppercase;
