@@ -379,6 +379,7 @@ img {
   width: 100%;
   display: block;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -504,4 +505,4 @@ img {
   color: #3e52a3;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styles.css.map */
